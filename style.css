@@ -19,10 +19,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
+    top: 0;
     z-index: 1000;
 }
 
@@ -42,18 +43,18 @@ body {
 }
 
 .search-bar {
-    width: 300px;
+    width: 250px;
 }
 
 .search-bar input {
     width: 100%;
-    padding: 6px 20px;
+    padding: 8px 20px;
     border-radius: 25px;
     border: 2px solid #ff00c8;
     background: #272727;
     color: #fff;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .actions {
@@ -84,7 +85,7 @@ body {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 120px 20px 40px 20px;
+    padding: 150px 20px 40px 20px;
 }
 
 .hero h2 {
@@ -118,26 +119,25 @@ body {
 /* Cards */
 .cards-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
     padding: 20px 20px;
-    width: 100%;
 }
 
 .card {
     background: rgba(163, 163, 163, 0.194);
     border-radius: 15px;
     padding: 20px;
-    width: 300px;
+    width: 90%;
+    max-width: 400px;
     text-align: center;
     transition: 400ms;
 }
 
 .card:hover {
     box-shadow: 0 0 40px rgba(255, 0, 200, 0.3);
-    transform: scale(1.02, 1.02);
-    transition: 400ms;
+    transform: scale(1.02);
 }
 
 .card img {
@@ -150,15 +150,17 @@ body {
 
 .card h3 {
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .price-btn {
     background: #ff00c8;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
 }
 
 /* Footer */
@@ -212,67 +214,45 @@ body {
 }
 
 .links {
-    width: 200px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.links a {
-    width: 50%;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer .support {
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 10px;
 }
 
-/* Responsive Media Queries */
+/* Responsive Tweaks */
 @media (max-width: 1024px) {
     .navbar {
         flex-direction: column;
+        gap: 10px;
         padding: 10px 20px;
-    }
-
-    .logo {
-        justify-content: center;
     }
 
     .search-bar {
         width: 90%;
-        margin: 10px 0;
-    }
-
-    .actions {
-        justify-content: center;
     }
 
     .hero {
-        padding: 100px 10px 30px 10px;
-    }
-
-    .tabs {
-        gap: 15px;
+        padding: 120px 10px 30px 10px;
     }
 
     .footer {
+        flex-direction: column;
+        align-items: center;
         gap: 40px;
-    }
-
-    .links {
-        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
-    .logo h1 {
-        font-size: 18px;
-    }
-
-    .search-bar {
-        width: 90%;
+    .hero h2 {
+        font-size: 24px;
     }
 
     .tab {
@@ -280,31 +260,25 @@ body {
         padding: 6px 12px;
     }
 
-    .cards-container {
-        gap: 15px;
-    }
-
     .card {
-        width: 80%;
+        width: 95%;
     }
 
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .price-btn {
+        padding: 10px 16px;
     }
 
     .footer h4 {
         font-size: 18px;
     }
 
-    .links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .links a {
-        width: 100%;
+    .footer a {
+        font-size: 14px;
     }
 }
 
@@ -318,21 +292,27 @@ body {
         height: 35px;
     }
 
+    .search-bar {
+        width: 100%;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .tab {
         font-size: 12px;
         padding: 5px 10px;
     }
 
-    .card img {
-        width: 120px;
-        height: 120px;
-    }
-
     .price-btn {
-        padding: 8px 16px;
+        font-size: 14px;
+        padding: 8px 12px;
     }
 
-    .footer a {
-        font-size: 14px;
+    .card img {
+        width: 100px;
+        height: 100px;
     }
 }
