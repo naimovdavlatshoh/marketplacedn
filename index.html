@@ -30,6 +30,22 @@
                     data-auth-url="http://127.0.0.1:8000/auth/telegram"
                     data-request-access="write"
                 ></script>
+                <script>
+                    // Tokenni URL dan olish
+                    function getQueryParam(name) {
+                        const params = new URLSearchParams(
+                            window.location.search
+                        );
+                        return params.get(name);
+                    }
+
+                    const token = getQueryParam("token");
+
+                    if (token) {
+                        localStorage.setItem("auth_token", token); // Tokenni localStorage-ga saqlash
+                        window.location.href = "https://marketplacedn.netlify.app/"; // Muvaffaqiyatli login bo‘lsa, dashboard sahifasiga yo‘naltirish
+                    }
+                </script>
 
                 <button class="cart-btn">🛒</button>
             </div>
