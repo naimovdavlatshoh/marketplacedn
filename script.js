@@ -5,7 +5,7 @@ const limit = 2;
 // Ma'lumot olish funksiyasi
 async function getData(page = 1) {
     const skip = (page - 1) * limit;
-    const url = `http://45.147.177.211:8000/all/product/?skip=${skip}&limit=${limit}`;
+    const url = `https://api.cardeurope.ru/all/product/?skip=${skip}&limit=${limit}`;
 
     try {
         const response = await fetch(url, {
