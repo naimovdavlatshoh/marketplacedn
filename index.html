@@ -8,85 +8,95 @@
     </head>
     <body>
         <!-- Header -->
-        <header class="navbar">
-            <div class="logo">
-                <span
-                    ><img
-                        src="./logo_DK.png"
-                        style="width: 70px; height: 70px; object-fit: contain"
-                        alt=""
-                /></span>
-                <h1><span>DKNodes Marketplace</span></h1>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search nodes" />
-            </div>
-            <div class="actions">
-                <div class="telegram">
-                    <script
-                        async
-                        src="https://telegram.org/js/telegram-widget.js?7"
-                        data-telegram-login="cosme_bbot"
-                        data-size="large"
-                        data-auth-url="http://45.147.177.211:8000/auth/telegram"
-                        data-request-access="write"
-                    ></script>
+        <div class="site">
+            <header class="navbar">
+                <div class="logo">
+                    <span
+                        ><img
+                            src="./logo_DK.png"
+                            style="
+                                width: 70px;
+                                height: 70px;
+                                object-fit: contain;
+                            "
+                            alt=""
+                    /></span>
+                    <h1><span>DKNodes Marketplace</span></h1>
                 </div>
-
-                <button class="cart-btn_">🛒</button>
-            </div>
-        </header>
-
-        <section class="hero">
-            <h2>Explore Assortment of DK Nodes</h2>
-            <div class="tabs">
-                <button class="tab active">Marketplace</button>
-                <button class="tab">Previously</button>
-                <button class="tab">Soon on DKnodes</button>
-            </div>
-        </section>
-
-        <!-- Cards -->
-        <section class="cards-container"></section>
-        <div class="paginations">
-            <div class="prev">prev</div>
-            <div class="next">next</div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="social-links">
-                <h4>Social Links</h4>
-                <div class="links">
-                    <a href="#">Telegram</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Teletype</a>
-                    <a href="#">YouTube</a>
-                    <a href="#">Medium</a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search nodes" />
                 </div>
+                <div class="actions">
+                    <div class="telegram">
+                        <script
+                            async
+                            src="https://telegram.org/js/telegram-widget.js?7"
+                            data-telegram-login="cosme_bbot"
+                            data-size="large"
+                            data-auth-url="http://45.147.177.211:8000/auth/telegram"
+                            data-request-access="write"
+                        ></script>
+                    </div>
+
+                    <button class="cart-btn_">🛒</button>
+                </div>
+            </header>
+
+            <section class="hero">
+                <h2>Explore Assortment of DK Nodes</h2>
+                <div class="tabs">
+                    <button class="tab active">Marketplace</button>
+                    <button class="tab">Previously</button>
+                    <button class="tab">Soon on DKnodes</button>
+                </div>
+            </section>
+
+            <!-- Cards -->
+            <section class="cards-container"></section>
+            <div class="paginations">
+                <div class="prev">prev</div>
+                <div class="next">next</div>
             </div>
-            <div class="support">
-                <h4>Support</h4>
-                <a href="#">Telegram support</a>
-                <a href="#">FAQ</a>
-            </div>
-        </footer>
 
-        <!-- Modal -->
-        <!-- Modal Overlay -->
-        <div id="cartModal_" class="modal_">
-            <div class="modal-content_">
-                <span class="close_">&times;</span>
-                <h2 class="title">Your Cart</h2>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="social-links">
+                    <h4>Social Links</h4>
+                    <div class="links">
+                        <a href="#">Telegram</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Teletype</a>
+                        <a href="#">YouTube</a>
+                        <a href="#">Medium</a>
+                    </div>
+                </div>
+                <div class="support">
+                    <h4>Support</h4>
+                    <a href="#">Telegram support</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </footer>
 
-                <div class="cart-items-container_"></div>
+            <!-- Modal -->
+            <!-- Modal Overlay -->
+            <div id="cartModal_" class="modal_">
+                <div class="modal-content_">
+                    <span class="close_">&times;</span>
+                    <h2 class="title">Your Cart</h2>
 
-                <hr class="divider_" />
+                    <div class="cart-items-container_"></div>
 
-                <div class="cart-footer_">
-                    <strong>Total: <span id="cart-total_">$0.00</span></strong>
-                    <button class="checkout-btn_">Proceed to Checkout</button>
+                    <hr class="divider_" />
+
+                    <div class="cart-footer_">
+                        <strong
+                            >Total: <span id="cart-total_">$0.00</span></strong
+                        >
+                        <button class="checkout-btn_">
+                            Proceed to Checkout
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
