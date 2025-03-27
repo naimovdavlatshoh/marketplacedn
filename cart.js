@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartBtn = document.querySelector(".cart-btn_");
     const cartItemsContainer = document.querySelector(".cart-items-container_");
     const cartTotal = document.getElementById("cart-total_");
+    const cartTitle = document.getElementById("title");
+
+    console.log(cartTitle);
 
     // Modalni ochish
     cartBtn.addEventListener("click", function () {
@@ -40,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const data = await response.json();
-            console.log(data);
+            cartTitle.innerHTM = `Your Cart (${data.cart.length})`
 
             cartItemsContainer.innerHTML = "";
 

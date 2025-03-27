@@ -192,6 +192,10 @@ body {
     margin-bottom: 20px;
 }
 
+.title {
+    text-align: start;
+}
+
 .price-btn {
     background: linear-gradient(135deg, #ff66ff 0%, #ff0099 100%);
     color: #fff;
