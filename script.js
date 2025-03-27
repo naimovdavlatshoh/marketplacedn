@@ -50,8 +50,13 @@ function renderCards(data) {
         const title = document.createElement("h3");
         title.textContent = item.title || item.name;
 
+        const button = document.createElement("button");
+        button.classList.add("price-btn");
+        button.innerHTML = `Monthly $${item.price}` || "0.00";
+
         // Content containerga qo'shish
         cardContent.appendChild(title);
+        cardContent.appendChild(button);
 
         // Card containerga qo'shish
         card.appendChild(img);
@@ -70,10 +75,11 @@ modal.classList.add("modal");
 modal.innerHTML = `
     <div class="modal-content">
         <span class="close">&times;</span>
+        <h3 id="modal-desc"></h3>
         <img id="modal-img" src="" alt="">
         <h3 id="modal-title"></h3>
         <p id="modal-price"></p>
-        <button id="modal-add-to-cart">Add to Cart</button>
+        <button id="modal-add-to-cart"></button>
     </div>
 `;
 document.body.appendChild(modal);
@@ -82,9 +88,11 @@ document.body.appendChild(modal);
 function openModal(item) {
     document.getElementById("modal-title").textContent =
         item.name || item.title;
+    document.getElementById("modal-desc").textContent =
+        item.description || item.title;
     document.getElementById("modal-img").src =
         item.image_url || item.image || "";
-    document.getElementById("modal-price").textContent = `Monthly - $${
+    document.getElementById("modal-add-to-cart").textContent = `Add to Cart $${
         item.price || "0.00"
     }`;
 
@@ -104,9 +112,9 @@ function openModal(item) {
                 }
             );
             if (response.ok) {
-                alert(`${item.title || item.name} savatga qo'shildi!`);
+                alert(`${item.title || item.name} added to cart`);
             } else {
-                alert("Xatolik yuz berdi, qaytadan urinib ko'ring.");
+                alert("Something went wrong! Please try again.");
             }
         } catch (error) {
             console.error("Xatolik:", error);

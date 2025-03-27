@@ -193,9 +193,9 @@ body {
 }
 
 .price-btn {
-    background: #ff00c8;
+    background: linear-gradient(135deg, #ff66ff 0%, #ff0099 100%);
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 30px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -442,8 +442,8 @@ body {
 /* Close Button */
 .close_ {
     position: absolute;
-    top: 10px;
-    left: 15px;
+    top: 20px;
+    left: 25px;
     font-size: 20px;
     cursor: pointer;
 }
@@ -463,8 +463,9 @@ body {
 .remove-btn_ {
     background: white;
     border: none;
-    border-radius: 5px;
-    padding: 5px;
+    color: red;
+    border-radius: 2px;
+    padding: 6px;
     cursor: pointer;
 }
 

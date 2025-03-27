@@ -22,14 +22,16 @@
                 <input type="text" placeholder="Search nodes" />
             </div>
             <div class="actions">
-                <script
-                    async
-                    src="https://telegram.org/js/telegram-widget.js?7"
-                    data-telegram-login="cosme_bbot"
-                    data-size="large"
-                    data-auth-url="http://45.147.177.211:8000/auth/telegram"
-                    data-request-access="write"
-                ></script>
+                <div class="telegram">
+                    <script
+                        async
+                        src="https://telegram.org/js/telegram-widget.js?7"
+                        data-telegram-login="cosme_bbot"
+                        data-size="large"
+                        data-auth-url="http://45.147.177.211:8000/auth/telegram"
+                        data-request-access="write"
+                    ></script>
+                </div>
 
                 <button class="cart-btn_">🛒</button>
             </div>
@@ -75,19 +77,15 @@
         <!-- Modal Overlay -->
         <div id="cartModal_" class="modal_">
             <div class="modal-content_">
-                <span class="close_" style="text-align: center">&times;</span>
-                <h2>Your Cart (1)</h2>
+                <span class="close_">&times;</span>
+                <h2>Your Cart</h2>
 
-                <div class="cart-item_">
-                    <span class="item-name_">Titan Network</span>
-                    <span class="item-price_">$99.99 x 1</span>
-                    <button class="remove-btn_">✖</button>
-                </div>
+                <div class="cart-items-container_"></div>
 
                 <hr class="divider_" />
 
                 <div class="cart-footer_">
-                    <strong>Total: $99.99</strong>
+                    <strong>Total: <span id="cart-total_">$0.00</span></strong>
                     <button class="checkout-btn_">Proceed to Checkout</button>
                 </div>
             </div>
