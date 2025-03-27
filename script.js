@@ -92,7 +92,7 @@ function openModal(item) {
     modalAddToCartBtn.onclick = async () => {
         try {
             const response = await fetch(
-                `http://45.147.177.211:8000/cart/add?product_id=${item.id}`,
+                `https://api.cardeurope.ru/cart/add?product_id=${item.id}`,
                 {
                     method: "POST",
                     headers: {

@@ -31,7 +31,7 @@
                     data-request-access="write"
                 ></script>
 
-                <button class="cart-btn">🛒</button>
+                <button class="cart-btn_">🛒</button>
             </div>
         </header>
 
@@ -72,11 +72,24 @@
         </footer>
 
         <!-- Modal -->
+        <!-- Modal Overlay -->
         <div id="cartModal_" class="modal_">
             <div class="modal-content_">
-                <span class="close_">&times;</span>
-                <h2>Your Shopping Cart</h2>
-                <p>Cart items will be displayed here...</p>
+                <span class="close_" style="text-align: center">&times;</span>
+                <h2>Your Cart (1)</h2>
+
+                <div class="cart-item_">
+                    <span class="item-name_">Titan Network</span>
+                    <span class="item-price_">$99.99 x 1</span>
+                    <button class="remove-btn_">✖</button>
+                </div>
+
+                <hr class="divider_" />
+
+                <div class="cart-footer_">
+                    <strong>Total: $99.99</strong>
+                    <button class="checkout-btn_">Proceed to Checkout</button>
+                </div>
             </div>
         </div>
 
