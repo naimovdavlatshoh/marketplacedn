@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartBtn = document.querySelector(".cart-btn_");
     const cartItemsContainer = document.querySelector(".cart-items-container_");
     const cartTotal = document.getElementById("cart-total_");
-    const cartTitle = document.getElementById("title");
-
-    console.log(cartTitle);
 
     // Modalni ochish
     cartBtn.addEventListener("click", function () {
@@ -32,9 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const response = await fetch("https://api.cardeurope.ru/cart", {
                 method: "GET",
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem(
-                        "auth_token"
-                    )}`,
+                    Authorization: `Bearer ${localStorage.getItem("auth_token")}`,
                 },
             });
 
@@ -43,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const data = await response.json();
-            cartTitle.innerHTM = `Your Cart (${data.cart.length})`
+            console.log(data);
 
             cartItemsContainer.innerHTML = "";
 
